@@ -4,7 +4,7 @@ STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 -s veri \
 -t veri \
 -a mobilenet_v3_small \
---root /content \
+--root datasets \
 --height 224 \
 --width 224 \
 --optim amsgrad \
