@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STUDENT_ID=zw00953 STUDENT_NAME=""Ziyu Wang"" python main.py \
+STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 -s veri \
 -t veri \
 -a resnet18 \
