@@ -3,7 +3,7 @@
 STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 -s veri \
 -t veri \
--a resnet34_fc512 \
+-a resnet50 \
 --root datasets \
 --height 224 \
 --width 224 \
@@ -13,4 +13,4 @@ STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 --stepsize 20 40 \
 --train-batch-size 64 \
 --test-batch-size 100 \
---save-dir logs/1.2-resnet34_fc512-veri
+--save-dir logs/1.2-resnet50-veri
