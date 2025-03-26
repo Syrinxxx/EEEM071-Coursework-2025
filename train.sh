@@ -1,6 +1,6 @@
 #!/bin/bash
 
-STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+# STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 # -s veri \
 # -t veri \
 # -a vgg16 \
@@ -28,7 +28,7 @@ for random_erase in "" "--random-erase"; do
 
             echo "Running experiment: $EXP_NAME"
 
-            python main.py \
+            STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
                 -s veri \
                 -t veri \
                 -a mobilenet_v3_small \
