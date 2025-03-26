@@ -3,7 +3,7 @@
 STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 -s veri \
 -t veri \
--a resnet18 \
+-a resnet50 \
 --root datasets \
 --height 224 \
 --width 224 \
@@ -15,7 +15,7 @@ STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 --test-batch-size 100 \
 --random-erase \
 --color-jitter \
---save-dir logs/1.2-resnet18-randomerase-colorjitter-veri
+--save-dir logs/2.2-resnet50-randomerase-colorjitter-veri
 
 # # 2.1
 # for random_erase in "" "--random-erase"; do
