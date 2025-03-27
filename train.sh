@@ -8,7 +8,7 @@ STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 --height 224 \
 --width 224 \
 --optim amsgrad \
---lr 0.001 \
+--lr 0.0.00001 \
 --max-epoch 10 \
 --stepsize 20 40 \
 --train-batch-size 64 \
