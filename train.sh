@@ -8,12 +8,12 @@ STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 --height 224 \
 --width 224 \
 --optim amsgrad \
---lr 0.0001 \
+--lr 0.0005 \
 --max-epoch 10 \
 --stepsize 20 40 \
 --train-batch-size 64 \
 --test-batch-size 100 \
---save-dir logs/3.1.1-0.0001-mobilenet_v3_small
+--save-dir logs/3.1.1-0.0005-mobilenet_v3_small
 
 # --lr 0.0003 \
 
