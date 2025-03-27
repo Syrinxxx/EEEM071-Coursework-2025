@@ -33,7 +33,7 @@ STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 --random-erase \
 --color-jitter \
 #--color-aug \
---save-dir logs/2.2-resnet34-randomerase-colorjitter
+--save-dir logs/2.2-resnet34-randomerase-colorjitter \
 
 
 # for random_erase in "" "--random-erase"; do
