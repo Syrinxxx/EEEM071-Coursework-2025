@@ -1,9 +1,27 @@
 #!/bin/bash
 
+STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+-s veri \
+-t veri \
+-a mobilenet_v3_small \
+--root datasets \
+--height 224 \
+--width 224 \
+--optim amsgrad \
+# --lr 0.0003 \
+--lr 0.001 \
+--max-epoch 10 \
+--stepsize 20 40 \
+--train-batch-size 64 \
+--test-batch-size 100 \
+--save-dir logs/3.1.1-0.001-mobilenet_v3_small
+
+# 2.1
+
 # STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 # -s veri \
 # -t veri \
-# -a mobilenet_v3_small \
+# -a resnet34 \
 # --root datasets \
 # --height 224 \
 # --width 224 \
@@ -13,27 +31,10 @@
 # --stepsize 20 40 \
 # --train-batch-size 64 \
 # --test-batch-size 100 \
-# --save-dir logs/TEST-mobilenet_v3_small
-
-# 2.1
-
-STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
--s veri \
--t veri \
--a resnet34 \
---root datasets \
---height 224 \
---width 224 \
---optim amsgrad \
---lr 0.0003 \
---max-epoch 10 \
---stepsize 20 40 \
---train-batch-size 64 \
---test-batch-size 100 \
---random-erase \
---color-jitter \
-#--color-aug \
---save-dir logs/2.2-resnet34-randomerase-colorjitter \
+# --random-erase \
+# --color-jitter \
+# #--color-aug \
+# --save-dir logs/2.2-resnet34-randomerase-colorjitter \
 
 
 # for random_erase in "" "--random-erase"; do
