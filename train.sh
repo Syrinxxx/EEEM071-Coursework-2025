@@ -88,7 +88,7 @@ for random_erase in "" "--random-erase"; do
         for color_aug in "" "--color-aug"; do
 
             # exprriment name generation
-            EXP_NAME="2.2-resnet50_fc512"
+            EXP_NAME="2.2-resnet34"
             [ ! -z "$random_erase" ] && EXP_NAME+="-randomerase"
             [ ! -z "$color_jitter" ] && EXP_NAME+="-colorjitter"
             [ ! -z "$color_aug" ] && EXP_NAME+="-coloraug"
@@ -98,7 +98,7 @@ for random_erase in "" "--random-erase"; do
             STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
                 -s veri \
                 -t veri \
-                -a resnet50_fc512 \
+                -a resnet34 \
                 --root datasets \
                 --height 224 \
                 --width 224 \
