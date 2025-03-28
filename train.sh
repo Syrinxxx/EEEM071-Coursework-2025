@@ -32,7 +32,7 @@ for bs in 16 32 128 256; do
         --lr 0.0003 \
         --max-epoch 10 \
         --stepsize 20 40 \
-        --train-batch-size $bs \ 
+        --train-batch-size $bs \
         --test-batch-size 100 \
         --save-dir logs/3.2-mobilenet_v3_small-bs$bs
 done
