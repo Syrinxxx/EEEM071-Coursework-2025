@@ -74,24 +74,7 @@
 #     --save-dir logs/3.2-mobilenet_v3_small-bs$bs \
 
 # 3.1 learning rate
-# for lr in 0.0001 0.00001; do
-#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
-#     -s veri \
-#     -t veri \
-#     -a resnet18 \
-#     --root datasets \
-#     --height 224 \
-#     --width 224 \
-#     --optim amsgrad \
-#     --lr $lr \
-#     --max-epoch 10 \
-#     --stepsize 20 40 \
-#     --train-batch-size 64 \
-#     --test-batch-size 100 \
-#     --save-dir logs/3.1-resnet18-lr$lr
-# done
-
-for lr in 0.0001 0.00001 0.0005 0.001; do
+for lr in 0.0001 0.00001; do
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
     -s veri \
     -t veri \
@@ -109,6 +92,25 @@ for lr in 0.0001 0.00001 0.0005 0.001; do
     --color-aug \
     --save-dir logs/3.1-resnet18-ca-cj-lr$lr
 done
+
+# for lr in 0.0005 0.001; do
+#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+#     -s veri \
+#     -t veri \
+#     -a resnet18 \
+#     --root datasets \
+#     --height 224 \
+#     --width 224 \
+#     --optim amsgrad \
+#     --lr $lr \
+#     --max-epoch 10 \
+#     --stepsize 20 40 \
+#     --train-batch-size 64 \
+#     --test-batch-size 100 \
+#     --color-jitter \
+#     --color-aug \
+#     --save-dir logs/3.1-resnet18-ca-cj-lr$lr
+# done
 
 
 # 2.1
