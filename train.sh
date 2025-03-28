@@ -18,7 +18,7 @@
 # --lr 0.0003 \
 
 # 3.2
-for bs in (16,32,128,256);do
+for bs in (16 32 128 256);do
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
     -s veri \
     -t veri \
