@@ -91,7 +91,7 @@
 #     --save-dir logs/3.1-resnet18-lr$lr
 # done
 
-for lr in 0.0005 0.001; do
+for lr in 0.0001 0.00001 0.0005 0.001; do
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
     -s veri \
     -t veri \
@@ -105,6 +105,8 @@ for lr in 0.0005 0.001; do
     --stepsize 20 40 \
     --train-batch-size 64 \
     --test-batch-size 100 \
+    --color-jitter \
+    --color-aug \
     --save-dir logs/3.1-resnet18-lr$lr
 done
 
