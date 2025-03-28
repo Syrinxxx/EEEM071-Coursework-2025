@@ -17,22 +17,44 @@
 
 # --lr 0.0003 \
 
-# 3.2
-for bs in (16 32 128 256);do
+# # 3.2
+#!/bin/bash
+
+for bs in 16 32 128 256; do  
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
-    -s veri \
-    -t veri \
-    -a mobilenet_v3_small \
-    --root datasets \
-    --height 224 \
-    --width 224 \
-    --optim amsgrad \
-    --lr 0.0003 \
-    --max-epoch 10 \
-    --stepsize 20 40 \
-    --train-batch-size $bs \
-    --test-batch-size 100 \
-    --save-dir logs/3.2-mobilenet_v3_small-bs$bs \
+        -s veri \
+        -t veri \
+        -a mobilenet_v3_small \
+        --root datasets \
+        --height 224 \
+        --width 224 \
+        --optim amsgrad \
+        --lr 0.0003 \
+        --max-epoch 10 \
+        --stepsize 20 40 \
+        --train-batch-size $bs \ 
+        --test-batch-size 100 \
+        --save-dir logs/3.2-mobilenet_v3_small-bs$bs
+done
+
+
+# for bs in ("16" "32" "128" "256");do
+#     # Convert the string to an integer
+#     bs_int=${bs//\"/}
+#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+#     -s veri \
+#     -t veri \
+#     -a mobilenet_v3_small \
+#     --root datasets \
+#     --height 224 \
+#     --width 224 \
+#     --optim amsgrad \
+#     --lr 0.0003 \
+#     --max-epoch 10 \
+#     --stepsize 20 40 \
+#     --train-batch-size $bs_int \
+#     --test-batch-size 100 \
+#     --save-dir logs/3.2-mobilenet_v3_small-bs$bs \
 
 
 # 2.1
