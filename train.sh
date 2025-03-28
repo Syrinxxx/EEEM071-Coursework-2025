@@ -107,7 +107,7 @@ for lr in 0.0001 0.00001 0.0005 0.001; do
     --test-batch-size 100 \
     --color-jitter \
     --color-aug \
-    --save-dir logs/3.1-resnet18-lr$lr
+    --save-dir logs/3.1-resnet18-ca-cj-lr$lr
 done
 
 
