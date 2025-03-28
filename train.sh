@@ -17,10 +17,27 @@
 
 # --lr 0.0003 \
 
-# # 3.2
-#!/bin/bash
+# # 3.3 optimiser
+# for optim in "amsgrad" "sgd" "adam" "adamw"; do
+#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+#         -s veri \
+#         -t veri \
+#         -a mobilenet_v3_small \
+#         --root datasets \
+#         --height 224 \
+#         --width 224 \
+#         --optim $optim \
+#         --lr 0.0003 \
+#         --max-epoch 10 \
+#         --stepsize 20 40 \
+#         --train-batch-size 64 \
+#         --test-batch-size 100 \
+#         --save-dir logs/3.3-mobilenet_v3_small-$optim
+# done
 
-for bs in 16 32 128 256; do  
+# 3.2 batch size
+
+for bs in 32 128 256; do  
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
         -s veri \
         -t veri \
