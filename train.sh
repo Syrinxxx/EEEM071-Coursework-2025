@@ -37,26 +37,7 @@
 
 # # 3.2 batch size
 
-# for bs in 32 128; do  
-#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
-#         -s veri \
-#         -t veri \
-#         -a resnet18 \
-#         --root datasets \
-#         --height 224 \
-#         --width 224 \
-#         --optim amsgrad \
-#         --lr 0.0001 \
-#         --max-epoch 10 \
-#         --stepsize 20 40 \
-#         --train-batch-size $bs \
-#         --test-batch-size 100 \
-#         --color-jitter \
-#         --color-aug \
-#         --save-dir logs/3.2-resnet18-bs$bs
-# done
-
-for bs in 16 256; do  
+for bs in 32 128; do  
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
         -s veri \
         -t veri \
@@ -74,6 +55,25 @@ for bs in 16 256; do
         --color-aug \
         --save-dir logs/3.2-resnet18-bs$bs
 done
+
+# for bs in 16 256; do  
+#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+#         -s veri \
+#         -t veri \
+#         -a resnet18 \
+#         --root datasets \
+#         --height 224 \
+#         --width 224 \
+#         --optim amsgrad \
+#         --lr 0.0001 \
+#         --max-epoch 10 \
+#         --stepsize 20 40 \
+#         --train-batch-size $bs \
+#         --test-batch-size 100 \
+#         --color-jitter \
+#         --color-aug \
+#         --save-dir logs/3.2-resnet18-bs$bs
+# done
 
 
 
