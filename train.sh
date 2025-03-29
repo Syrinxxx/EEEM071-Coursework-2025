@@ -56,7 +56,7 @@
 #         --save-dir logs/3.2-resnet18-bs$bs
 # done
 
-for bs in 256; do  
+for bs in 16; do  
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
         -s veri \
         -t veri \
