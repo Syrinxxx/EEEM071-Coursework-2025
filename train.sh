@@ -46,50 +46,40 @@
 #         --height 224 \
 #         --width 224 \
 #         --optim amsgrad \
-#         --lr 0.0003 \
+#         --lr 0.0001 \
 #         --max-epoch 10 \
 #         --stepsize 20 40 \
 #         --train-batch-size $bs \
 #         --test-batch-size 100 \
-#         --save-dir logs/3.2-resnet34-bs$bs
+#         --color-jitter \
+#         --color-aug \
+#         --save-dir logs/3.2-resnet18-bs$bs
 # done
 
+for bs in 16 256; do  
+    STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+        -s veri \
+        -t veri \
+        -a resnet18 \
+        --root datasets \
+        --height 224 \
+        --width 224 \
+        --optim amsgrad \
+        --lr 0.0001 \
+        --max-epoch 10 \
+        --stepsize 20 40 \
+        --train-batch-size $bs \
+        --test-batch-size 100 \
+        --color-jitter \
+        --color-aug \
+        --save-dir logs/3.2-resnet18-bs$bs
+done
 
-# for bs in ("16" "32" "128" "256");do
-#     # Convert the string to an integer
-#     bs_int=${bs//\"/}
-#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
-#     -s veri \
-#     -t veri \
-#     -a mobilenet_v3_small \
-#     --root datasets \
-#     --height 224 \
-#     --width 224 \
-#     --optim amsgrad \
-#     --lr 0.0003 \
-#     --max-epoch 10 \
-#     --stepsize 20 40 \
-#     --train-batch-size $bs_int \
-#     --test-batch-size 100 \
-#     --save-dir logs/3.2-mobilenet_v3_small-bs$bs \
+
+
 
 # 3.1 learning rate
-STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
-    -s veri \
-    -t veri \
-    -a resnet18 \
-    --root datasets \
-    --height 224 \
-    --width 224 \
-    --optim amsgrad \
-    --lr 0.001 \
-    --max-epoch 10 \
-    --stepsize 20 40 \
-    --train-batch-size 64 \
-    --test-batch-size 100 \
-    --color-jitter \
-    --color-aug \
-    --save-dir logs/3.1-resnet18-ca-cj-lr0.00001
+
 # for lr in 0.0001 0.00001; do
 #     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
 #     -s veri \
