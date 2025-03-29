@@ -18,7 +18,7 @@
 # --lr 0.0003 \
 
 # # 3.3 optimiser
-for optim in "sgd" "adam" "adamw"; do
+for optim in "rmsprop"; do
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
         -s veri \
         -t veri \
@@ -58,24 +58,24 @@ done
 #         --save-dir logs/3.2-resnet18-bs$bs-cacjlr
 # done
 
-for bs in 32; do  
-    STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
-        -s veri \
-        -t veri \
-        -a resnet18 \
-        --root datasets \
-        --height 224 \
-        --width 224 \
-        --optim amsgrad \
-        --lr 0.0001 \
-        --max-epoch 10 \
-        --stepsize 20 40 \
-        --train-batch-size $bs \
-        --test-batch-size 100 \
-        --color-jitter \
-        --color-aug \
-        --save-dir logs/3.2-resnet18-bs$bs-cacjlr
-done
+# for bs in 32; do  
+#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+#         -s veri \
+#         -t veri \
+#         -a resnet18 \
+#         --root datasets \
+#         --height 224 \
+#         --width 224 \
+#         --optim amsgrad \
+#         --lr 0.0001 \
+#         --max-epoch 10 \
+#         --stepsize 20 40 \
+#         --train-batch-size $bs \
+#         --test-batch-size 100 \
+#         --color-jitter \
+#         --color-aug \
+#         --save-dir logs/3.2-resnet18-bs$bs-cacjlr
+# done
 
 
 
