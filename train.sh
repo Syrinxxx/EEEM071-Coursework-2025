@@ -18,7 +18,8 @@
 # --lr 0.0003 \
 
 # # 3.3 optimiser
-for optim in "rmsprop"; do
+
+for bs in 16 32 64 128 256; do  
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
         -s veri \
         -t veri \
@@ -26,16 +27,54 @@ for optim in "rmsprop"; do
         --root datasets \
         --height 224 \
         --width 224 \
-        --optim $optim \
+        --optim sgd \
         --lr 0.0001 \
         --max-epoch 10 \
         --stepsize 20 40 \
-        --train-batch-size 128 \
+        --train-batch-size $bs \
         --test-batch-size 100 \
         --color-jitter \
         --color-aug \
-        --save-dir logs/3.3-resnet18-optim_$optim-cacjlrbs
+        --save-dir logs/3.2-resnet18-sgd-bs$bs-cacjlr
 done
+
+# for lr in 0.001 0.0005 0.0003 0.001 0.00001; do
+#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+#     -s veri \
+#     -t veri \
+#     -a resnet18 \
+#     --root datasets \
+#     --height 224 \
+#     --width 224 \
+#     --optim sgd \
+#     --lr $lr \
+#     --max-epoch 10 \
+#     --stepsize 20 40 \
+#     --train-batch-size 128 \
+#     --test-batch-size 100 \
+#     --color-jitter \
+#     --color-aug \
+#     --save-dir logs/3.1-resnet18-sgd-lr$lr-cacjbs
+# done
+
+# for optim in "rmsprop"; do
+#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+#         -s veri \
+#         -t veri \
+#         -a resnet18 \
+#         --root datasets \
+#         --height 224 \
+#         --width 224 \
+#         --optim $optim \
+#         --lr 0.0001 \
+#         --max-epoch 10 \
+#         --stepsize 20 40 \
+#         --train-batch-size 128 \
+#         --test-batch-size 100 \
+#         --color-jitter \
+#         --color-aug \
+#         --save-dir logs/3.3-resnet18-optim_$optim-cacjlrbs
+# done
 
 # # 3.2 batch size
 
