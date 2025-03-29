@@ -38,7 +38,7 @@
 #         --save-dir logs/3.3-resnet18-sgd-bs$bs-cacjlr
 # done
 
-for lr in 0.001 0.0005 0.0003 0.001 0.00001; do
+for lr in 0.001 0.00001; do
     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
     -s veri \
     -t veri \
