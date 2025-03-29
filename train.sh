@@ -19,43 +19,43 @@
 
 # # 3.3 optimiser
 
-for bs in 16 32 64 128 256; do  
-    STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
-        -s veri \
-        -t veri \
-        -a resnet18 \
-        --root datasets \
-        --height 224 \
-        --width 224 \
-        --optim sgd \
-        --lr 0.0001 \
-        --max-epoch 10 \
-        --stepsize 20 40 \
-        --train-batch-size $bs \
-        --test-batch-size 100 \
-        --color-jitter \
-        --color-aug \
-        --save-dir logs/3.3-resnet18-sgd-bs$bs-cacjlr
-done
-
-# for lr in 0.001 0.0005 0.0003 0.001 0.00001; do
+# for bs in 16 32 64 128 256; do  
 #     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
-#     -s veri \
-#     -t veri \
-#     -a resnet18 \
-#     --root datasets \
-#     --height 224 \
-#     --width 224 \
-#     --optim sgd \
-#     --lr $lr \
-#     --max-epoch 10 \
-#     --stepsize 20 40 \
-#     --train-batch-size 128 \
-#     --test-batch-size 100 \
-#     --color-jitter \
-#     --color-aug \
-#     --save-dir logs/3.3-resnet18-sgd-lr$lr-cacjbs
+#         -s veri \
+#         -t veri \
+#         -a resnet18 \
+#         --root datasets \
+#         --height 224 \
+#         --width 224 \
+#         --optim sgd \
+#         --lr 0.0001 \
+#         --max-epoch 10 \
+#         --stepsize 20 40 \
+#         --train-batch-size $bs \
+#         --test-batch-size 100 \
+#         --color-jitter \
+#         --color-aug \
+#         --save-dir logs/3.3-resnet18-sgd-bs$bs-cacjlr
 # done
+
+for lr in 0.001 0.0005 0.0003 0.001 0.00001; do
+    STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+    -s veri \
+    -t veri \
+    -a resnet18 \
+    --root datasets \
+    --height 224 \
+    --width 224 \
+    --optim sgd \
+    --lr $lr \
+    --max-epoch 10 \
+    --stepsize 20 40 \
+    --train-batch-size 128 \
+    --test-batch-size 100 \
+    --color-jitter \
+    --color-aug \
+    --save-dir logs/3.3-resnet18-sgd-lr$lr-cacjbs
+done
 
 # for optim in "rmsprop"; do
 #     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
