@@ -35,7 +35,7 @@ for bs in 16 32 64 128 256; do
         --test-batch-size 100 \
         --color-jitter \
         --color-aug \
-        --save-dir logs/3.2-resnet18-sgd-bs$bs-cacjlr
+        --save-dir logs/3.3-resnet18-sgd-bs$bs-cacjlr
 done
 
 # for lr in 0.001 0.0005 0.0003 0.001 0.00001; do
@@ -54,7 +54,7 @@ done
 #     --test-batch-size 100 \
 #     --color-jitter \
 #     --color-aug \
-#     --save-dir logs/3.1-resnet18-sgd-lr$lr-cacjbs
+#     --save-dir logs/3.3-resnet18-sgd-lr$lr-cacjbs
 # done
 
 # for optim in "rmsprop"; do
