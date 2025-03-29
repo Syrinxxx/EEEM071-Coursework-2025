@@ -53,7 +53,7 @@
 #         --test-batch-size 100 \
 #         --color-jitter \
 #         --color-aug \
-#         --save-dir logs/3.2-resnet18-bs$bs
+#         --save-dir logs/3.2-resnet18-bs$bs-cacjlr
 # done
 
 for bs in 16; do  
@@ -72,7 +72,7 @@ for bs in 16; do
         --test-batch-size 100 \
         --color-jitter \
         --color-aug \
-        --save-dir logs/3.2-resnet18-bs$bs
+        --save-dir logs/3.2-resnet18-bs$bs-cacjlr
 done
 
 
