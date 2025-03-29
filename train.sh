@@ -18,22 +18,24 @@
 # --lr 0.0003 \
 
 # # 3.3 optimiser
-# for optim in "sgd" "adam" "adamw"; do
-#     STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
-#         -s veri \
-#         -t veri \
-#         -a mobilenet_v3_small \
-#         --root datasets \
-#         --height 224 \
-#         --width 224 \
-#         --optim $optim \
-#         --lr 0.0003 \
-#         --max-epoch 10 \
-#         --stepsize 20 40 \
-#         --train-batch-size 64 \
-#         --test-batch-size 100 \
-#         --save-dir logs/3.3-mobilenet_v3_small-$optim
-# done
+for optim in "sgd" "adam" "adamw"; do
+    STUDENT_ID=zw00953 STUDENT_NAME="Ziyu Wang" python main.py \
+        -s veri \
+        -t veri \
+        -a resnet18 \
+        --root datasets \
+        --height 224 \
+        --width 224 \
+        --optim $optim \
+        --lr 0.0001 \
+        --max-epoch 10 \
+        --stepsize 20 40 \
+        --train-batch-size 128 \
+        --test-batch-size 100 \
+        --color-jitter \
+        --color-aug \
+        --save-dir logs/3.3-resnet18-optim_$optim-cacjlrbs
+done
 
 # # 3.2 batch size
 
